@@ -15,16 +15,15 @@
           </mat-card-content>
           <mat-card-actions>
             <button mat-button color="primary">INGRESAR</button>
-            <!-- <mat-progress-spinner *ngIf="modulocompra.cargando" class="cargando" [diameter]="25" mode="indeterminate">
-            </mat-progress-spinner> -->
           </mat-card-actions>
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
-  <!--  <div *ngIf="modulos != null && modulos.length == 0" class="no-hay-modulos">
+  <!--Si no hay módulos-->
+  <div *ngIf="modulos != null && modulos.length == 0" class="no-hay-modulos">
     <h3>No existen módulos para administrar</h3>
-  </div> -->
+  </div>
   <!-- <div *ngIf="modulos == null" class="no-hay-modulos">
     <mat-spinner [diameter]="30" class="espera-modulos"></mat-spinner>
   </div> -->
