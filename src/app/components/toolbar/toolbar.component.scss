@@ -1,0 +1,16 @@
+.logo-miniatura{
+    margin-left:20px; 
+    margin-right:20px; 
+    background-color: #221414ba;
+    border-radius: 25px;
+    padding: 1px;
+    width: 30px;
+    height:30px;
+}
+
+@media only screen and (max-width:320px){
+    .logo-miniatura{
+        display:none;
+    }
+    
+}

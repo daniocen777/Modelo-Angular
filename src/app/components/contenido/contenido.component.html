@@ -1,0 +1,17 @@
+<div *ngIf="tieneusuario">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer [(opened)]="drawerAbierto" class="example-sidenav" mode="over">
+      <app-drawer></app-drawer>
+    </mat-drawer>
+
+    <app-toolbar *ngIf="showToolbar" [showMenuOption]="showMenuOption" (clickedDrawer)="mostrarDrawer()">
+    </app-toolbar>
+    <mat-grid-list [cols]=1 [style.height.px]="altocontenido" [rowHeight]="altocontenido" class="lista-grid"
+      (window:resize)="onResize($event)">
+      <mat-grid-tile [colspan]=1 [rowspan]="1" [style.height.px]="altocontenido" class="panel-total">
+        <ng-content></ng-content>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </mat-drawer-container>
+</div>

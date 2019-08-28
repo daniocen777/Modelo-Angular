@@ -1,0 +1,31 @@
+<app-contenido [showMenuOption]="autenticado" [showToolbar]="true" #contenido [showDrawer]="autenticado">
+  <div style="overflow-y: scroll;" [style.height.px]="altocontenido" [style.width.px]="anchocontenido"
+    class="grid-container">
+    <mat-grid-list style="margin:20px;" [cols]="columnastotales" [gutterSize]="5" rowHeight="220px">
+      <mat-grid-tile *ngFor="let modulo of modulos" [colspan]="columnaPanel" [rowspan]="1">
+        <mat-card class="grid-item" [style.width.px]="ismobil ? anchocontenido : anchocontenido / 2.5">
+          <mat-card-header>
+            <mat-card-title>{{ modulo.titulo }}</mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content>
+            <p>
+              {{ modulo.descripcion }}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary">INGRESAR</button>
+            <!-- <mat-progress-spinner *ngIf="modulocompra.cargando" class="cargando" [diameter]="25" mode="indeterminate">
+            </mat-progress-spinner> -->
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <!--  <div *ngIf="modulos != null && modulos.length == 0" class="no-hay-modulos">
+    <h3>No existen módulos para administrar</h3>
+  </div> -->
+  <!-- <div *ngIf="modulos == null" class="no-hay-modulos">
+    <mat-spinner [diameter]="30" class="espera-modulos"></mat-spinner>
+  </div> -->
+</app-contenido>
