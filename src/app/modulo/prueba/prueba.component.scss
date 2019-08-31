@@ -1,0 +1,24 @@
+.panel-izquierda{
+      
+    animation-name: opacity;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
+
+.panel-derecha{
+      
+    animation-name: opacity;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
+
+
+@keyframes opacity{
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+    }
+}
