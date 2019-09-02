@@ -1,0 +1,25 @@
+<app-toolbar-izquierda (clickedDrawer)="clickDrawer()" (busqueda)="getFormasPago($event)" [ismovil]="ismovil"
+  [showMenuOption]="true"></app-toolbar-izquierda>
+
+<mat-action-list [style.height.px]="altocontenido - 56" class="resumen">
+  <div *ngIf="formasPago != null && formasPago.length == 0" class="lista-ordenes">
+    <div class="espera-formas">
+      <p style="text-align:center; margin-right: 50px; margin-left:50px;">
+        No se han encontrado formas de pago, crea una para comenzar
+      </p>
+    </div>
+  </div>
+  <div *ngIf="formasPago != null" class="lista-ordenes">
+    <!-- <app-formas-lista-item *ngFor="let forma of formasPago" [formaPago]="forma"
+      (onClickedFormaPago)="clickFormaPago($event)" (onClickedEliminar)="clickEliminar($event)"></app-formas-lista-item> -->
+  </div>
+  <div *ngIf="formasPago == null" class="lista-ordenes">
+    <mat-spinner [diameter]="30" class="espera-formas"></mat-spinner>
+  </div>
+
+  <br />
+  <br /><br /><br /><br />
+  <button mat-fab color="accent" class="boton-flotante" >
+    <mat-icon aria-label="Nueva">add</mat-icon>
+  </button>
+</mat-action-list>

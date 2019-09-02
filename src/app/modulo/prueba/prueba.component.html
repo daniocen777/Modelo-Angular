@@ -1,43 +1,20 @@
-<app-contenido
-  [showMenuOption]="autenticado"
-  [showToolbar]="showToolbarGeneral"
-  #contenido
-  [showDrawer]="autenticado"
->
+<app-contenido [showMenuOption]="autenticado" [showToolbar]="showToolbarGeneral" #contenido [showDrawer]="autenticado">
   <div style="width:100%;height:100%">
-    <mat-grid-list
-      [cols]="columnastotales"
-      [style.height.px]="altocontenido"
-      [rowHeight]="altocontenido"
-      class="lista-grid"
-      (window:resize)="onResize($event)"
-    >
-      <mat-grid-tile
-        *ngIf="showColumnaIzquierda"
-        [colspan]="columnasizquierda"
-        [rowspan]="1"
-        [style.height.px]="altocontenido"
-        class="panel-izquierda"
-      >
+    <mat-grid-list [cols]="columnastotales" [style.height.px]="altocontenido" [rowHeight]="altocontenido"
+      class="lista-grid" (window:resize)="onResize($event)">
+      <mat-grid-tile *ngIf="showColumnaIzquierda" [colspan]="columnasizquierda" [rowspan]="1"
+        [style.height.px]="altocontenido" class="panel-izquierda">
         <div style="height:100%;width:100%;">
-          <p>xxxxxxxxxxxxxxxx</p>
-          xxxxxxxxxxxxxxxx
-          <p>xxxxxxxxxxxxxxxx</p>
-          <p>xxxxxxxxxxxxxxxx</p>
-          <p>xxxxxxxxxxxxxxxx</p>
-          xxxxxxxxxxxxxxxx
-          <p>xxxxxxxxxxxxxxxx</p>
-          xxxxxxxxxxxxxxxx
+          <app-lista #formaPagoLista class="lista-formas" [altocontenido]="altocontenido"
+            [anchocontenido]="anchocontenido" [ismovil]="ismovil" (onClickedDrawer)="contenido.mostrarDrawer()"
+            (onClickedFormaPago)="clickFormaPago($event)" (onClickedEliminar)="eliminarFormaPago($event)">
+          </app-lista>
         </div>
+
       </mat-grid-tile>
-      
-      <mat-grid-tile
-        *ngIf="showColumnaDerecha"
-        [colspan]="columnasderecha"
-        [rowspan]="1"
-        [style.height.px]="altocontenido"
-        class="panel-derecha"
-      >
+
+      <mat-grid-tile *ngIf="showColumnaDerecha" [colspan]="columnasderecha" [rowspan]="1"
+        [style.height.px]="altocontenido" class="panel-derecha">
         <div style="height:100%;width:100%;">
           <p>xxxxxxxxxxxxxxxx</p>
           <p>xxxxxxxxxxxxxxxx</p>

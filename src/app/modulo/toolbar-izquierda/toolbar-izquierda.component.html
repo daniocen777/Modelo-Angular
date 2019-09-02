@@ -1,0 +1,34 @@
+<mat-toolbar *ngIf="!buscando" color="primary" class="barra-citas">
+  <mat-toolbar-row>
+    <button *ngIf="showMenuOption" mat-icon-button (click)="clickDrawer()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <img *ngIf="!ismovil" class="logo-miniatura" src="assets/logo.png" alt="Logo" />
+    <span>Título
+    </span>
+
+    <span class="example-spacer"></span>
+    <button mat-icon-button (click)="buscando = !buscando">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-toolbar *ngIf="buscando" color="secondary" class="barra-citas toolbar-show">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="buscando = !buscando">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+
+    <mat-form-field floatLabel="never">
+      <input type="text" matInput [(ngModel)]="texto" placeholder="Buscar" (keyup)="buscar($event)" />
+
+    </mat-form-field>
+
+    <span class="example-spacer"></span>
+    <button mat-icon-button (click)="buscar()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

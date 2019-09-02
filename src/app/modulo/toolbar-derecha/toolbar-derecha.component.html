@@ -1,0 +1,18 @@
+<div *ngIf="showToolbar" class="tool-bar-coti" id="tool-bar-coti" (resize)="onResize()" (change)="onResize()">
+  <mat-toolbar color="primary" class="barra-formasPago" style="background-color:#2a298b;color:white;">
+    <mat-toolbar-row>
+      <button *ngIf="ismovil" mat-icon-button (click)="clickBack()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+
+      <!-- <span *ngIf="formaPago.forma_pago_id!=0">
+        Forma de Pago
+      </span>
+      <span *ngIf="formaPago.forma_pago_id==0">
+        Nueva forma de Pago
+      </span> -->
+
+      <span class="example-spacer"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

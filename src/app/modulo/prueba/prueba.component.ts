@@ -69,7 +69,7 @@ export class PruebaComponent implements OnInit {
   ajustarContenidos() {
     if (this.ismovil) {
       switch (
-        this.panelActual //En qué panel estoy actualmente?
+      this.panelActual //En qué panel estoy actualmente?
       ) {
         case 1: //En caso esté usando la lista de usuarios
           this.mostrarSoloPanelIzquierda();
@@ -100,5 +100,17 @@ export class PruebaComponent implements OnInit {
   mostrarSoloPanelIzquierda() {
     this.showColumnaIzquierda = true;
     this.showColumnaDerecha = false;
+  }
+
+  clickFormaPago() {
+    this.panelActual = 2;
+    this.ajustarContenidos();
+    /* setTimeout(() => { 
+      this.formaPagoDetalle.setFormaPago(formaPago);
+    }, 10); */
+  }
+
+  eliminarFormaPago() {
+    console.log("Quiere eliminar");
   }
 }
