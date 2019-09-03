@@ -15,9 +15,10 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ContenidoDerechaComponent } from './contenido-derecha/contenido-derecha.component';
 
 @NgModule({
-  declarations: [PruebaComponent, ToolbarIzquierdaComponent, ToolbarDerechaComponent, ListaComponent],
+  declarations: [PruebaComponent, ToolbarIzquierdaComponent, ToolbarDerechaComponent, ListaComponent, ContenidoDerechaComponent],
   imports: [CommonModule, ComponentsModule, MatGridListModule, FormsModule, MatToolbarModule, MatIconModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatListModule, MatProgressSpinnerModule]
 })
 export class ModuloModule { }

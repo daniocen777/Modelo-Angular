@@ -16,13 +16,9 @@
       <mat-grid-tile *ngIf="showColumnaDerecha" [colspan]="columnasderecha" [rowspan]="1"
         [style.height.px]="altocontenido" class="panel-derecha">
         <div style="height:100%;width:100%;">
-          <p>xxxxxxxxxxxxxxxx</p>
-          <p>xxxxxxxxxxxxxxxx</p>
-          <p>xxxxxxxxxxxxxxxx</p>
-          <p>xxxxxxxxxxxxxxxx</p>
-          <p>xxxxxxxxxxxxxxxx</p>
-          <p>xxxxxxxxxxxxxxxx</p>
-          <p>xxxxxxxxxxxxxxxx</p>
+          <app-contenido-derecha #formaPagoDetalle class="lista-formas-detalle" [altocontenido]="altocontenido"
+            [anchocontenido]="anchocontenido" [ismovil]="ismovil">
+          </app-contenido-derecha>
         </div>
       </mat-grid-tile>
     </mat-grid-list>
