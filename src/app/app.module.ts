@@ -7,12 +7,14 @@ import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
-import { SecondPageComponent } from './components/second-page/second-page.component';
-import { ThirdPageComponent } from './components/third-page/third-page.component';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 
 import { ScaffoldComponent } from './components/scaffold/scaffold.component';
+
+import { MatMenuModule } from '@angular/material/menu';
+import { SecondPageComponent } from './components/second-page/second-page.component';
+import { ThirdPageComponent } from './components/third-page/third-page.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { ScaffoldComponent } from './components/scaffold/scaffold.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
